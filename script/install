@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+echo "Installing govendor..."
+echo ""
+
+go get -u github.com/kardianos/govendor
+
+echo "Syncing vendors..."
+echo ""
+
+govendor sync
+
+script/build

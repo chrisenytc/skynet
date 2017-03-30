@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+if [ "$DOCKER" == true ]; then
+script/build || exit 1
+fi
+
+if [ "$LOG_TYPE" == "pretty" ]; then
+  echo ""
+  echo "<------------------------------------------------------------------------->"
+
+  cat script/logo.txt
+
+  echo "<------------------------------------------------------------------------->"
+  echo ""
+fi
+
+server

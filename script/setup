@@ -1,0 +1,56 @@
+#!/usr/bin/env bash
+
+echo "Preparing environment..."
+
+echo ""
+
+echo "Installing development gems..."
+
+echo ""
+
+bundle install || exit 1
+
+echo ""
+
+echo "Installing overcommit hooks..."
+
+echo ""
+
+overcommit --install || exit 1
+
+echo ""
+
+echo "Initializing overcommit..."
+
+echo ""
+
+overcommit --sign || exit 1
+
+echo ""
+
+echo "Creating environment variables..."
+
+cp .env-sample development.env || exit 1
+cp .env-sample test.env || exit 1
+
+echo ""
+
+echo "Building docker images..."
+
+echo ""
+
+docker-compose build || exit 1
+
+echo ""
+
+echo "All done!"
+
+echo ""
+
+echo "Run the command below to get started"
+
+echo ""
+
+echo "
+$ docker-compose up server
+"
