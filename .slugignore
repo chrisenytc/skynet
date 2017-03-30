@@ -1,0 +1,12 @@
+.dockerignore
+.editorconfig
+.gitignore
+.overcommit.yml
+.ruby-version
+.env-sample
+
+Dockerfile
+docker-compose.yml
+Gemfile
+Gemfile.lock
+README.md
