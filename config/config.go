@@ -6,12 +6,12 @@ import (
 )
 
 type Settings struct {
-	Port        string `env:"PORT",required`
-	Environment string `env:"GO_ENV",required`
-	LogType     string `env:"LOG_TYPE",required`
-	LogLevel    string `env:"LOG_LEVEL",required`
-	OldApiUrl   string `env:"OLD_API_URL",required`
-	NewApiUrl   string `env:"NEW_API_URL",required`
+	Port        string `env:"PORT,required"`
+	Environment string `env:"GO_ENV,required"`
+	LogType     string `env:"LOG_TYPE,required"`
+	LogLevel    string `env:"LOG_LEVEL,required"`
+	OldApiUrl   string `env:"OLD_API_URL,required"`
+	NewApiUrl   string `env:"NEW_API_URL,required"`
 }
 
 var config Settings
